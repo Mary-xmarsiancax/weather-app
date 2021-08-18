@@ -1,8 +1,6 @@
-
 import {combineReducers, createStore} from "redux";
 import React from 'react';
 import Reducer from "./reducer";
-
 
 
 let reducers = combineReducers({
@@ -11,5 +9,5 @@ let reducers = combineReducers({
 
 
 let store = createStore(reducers);
-window.store=store;
+window.store = store;
 export default store;
