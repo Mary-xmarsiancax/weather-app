@@ -1,0 +1,21 @@
+.fWr {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.footerText {
+    grid-column: 1/4;
+    font-size: large;
+    font-weight: bold;
+}
+.fLogo{
+    grid-column: 3/4;
+    grid-row: 1/4;
+}
+.fLogo img{
+    height: auto;
+    width: auto;
+    max-width: 60px;
+    max-height: 60px;
+    float: right;
+}

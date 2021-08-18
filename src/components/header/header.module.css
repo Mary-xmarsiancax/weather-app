@@ -1,0 +1,24 @@
+.wrap {
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:repeat(3,1fr) ;
+}
+.text{
+   grid-column: 1/4;
+    grid-row: 1/3;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.hLogoImg{
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.hLogoImg img{
+    width: 60px;
+}
+
+.select {
+    grid-column:3/4 ;
+    grid-row:3/4 ;
+}
