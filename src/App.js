@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from "./components/footer/footer";
 import s from "./App.module.css"
 import NavBarContainer from "./components/navBar/navBarContainer";
-import Content from "./components/content/content";
+import ContentContainer from "./components/content/contentContainer";
 
 
 
@@ -13,7 +13,7 @@ function App() {
         <div className={s.wr}>
             <div className={s.h}><HeaderContainer /></div>
             <div className={s.n}><NavBarContainer /></div>
-            <div className={s.c}><Content/></div>
+            <div className={s.c}><ContentContainer/></div>
             <div className={s.f}><Footer /></div>
         </div>
     );
