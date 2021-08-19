@@ -1,10 +1,10 @@
 let Content = (props) => {
     return <div>
         {/*<div>У ПРИРОДЫ НЕТ ПЛОХОЙ ПОГОДЫ,ВЫ СОГЛАСНЫ?</div>*/}
-        <div>{props.temp}</div>
-        <div>{props.temp_min}</div>
-        <div>{props.temp_max}</div>
-        <div>{props.pressure}</div>
+        <div>Температура воздуха:{props.temp}</div>
+        <div>Минимальная дневная температура воздуха: {props.tempMin}</div>
+        <div>Максимальная дневная температура воздуха:{props.tempMax}</div>
+        <div>Атмосферное давление составляет {props.pressure} единиц ртутного столба</div>
         {/*<div>{props.wind.speed}</div>*/}
     </div>
 }
