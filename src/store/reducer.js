@@ -1,8 +1,12 @@
 import React from 'react';
-const CHANGE_CURRENT_CITIES_NAME="CHANGE_CURRENT_CITIES_NAME"
-const SET_WEATHER="SET_WEATHER"
-export const onChangeCurrentCitiesName= (el) => ({type: CHANGE_CURRENT_CITIES_NAME, newCurrentCitiesName: el});
-export const setWeather= (temp,tempMin,tempMax,pressure,humidity) => ({type: SET_WEATHER, data:{temp,tempMin,tempMax,pressure,humidity} });
+
+const CHANGE_CURRENT_CITIES_NAME = "CHANGE_CURRENT_CITIES_NAME"
+const SET_WEATHER = "SET_WEATHER"
+export const onChangeCurrentCitiesName = (el) => ({type: CHANGE_CURRENT_CITIES_NAME, newCurrentCitiesName: el});
+export const setWeather = (temp, tempMin, tempMax, pressure, humidity, speed) => ({
+    type: SET_WEATHER,
+    data: {temp, tempMin, tempMax, pressure, humidity, speed}
+});
 
 
 let initialState = {
@@ -11,8 +15,8 @@ let initialState = {
         tempMax: null,
         pressure: null,
         humidity: null,
-        windSpeed: null,
-    currentCitiesName:"Готэм-Сити"
+        speed: null,
+        currentCitiesName: "Готэм-Сити"
     }
 ;
 const Reducer = (state = initialState, action) => {
@@ -20,7 +24,7 @@ const Reducer = (state = initialState, action) => {
         case CHANGE_CURRENT_CITIES_NAME:
             return {
                 ...state,
-                currentCitiesName:action.newCurrentCitiesName,
+                currentCitiesName: action.newCurrentCitiesName,
 
             }
 
@@ -36,7 +40,7 @@ const Reducer = (state = initialState, action) => {
 }
 
 
-    export default Reducer;
+export default Reducer;
 
 
 

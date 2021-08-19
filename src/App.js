@@ -1,6 +1,5 @@
 import HeaderContainer from "./components/header/headerContainer";
 import React from 'react';
-import NavBar from "./components/navBar/navBar";
 import Footer from "./components/footer/footer";
 import s from "./App.module.css"
 import NavBarContainer from "./components/navBar/navBarContainer";
