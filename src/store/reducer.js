@@ -9,6 +9,7 @@ export const setWeather = (temp, tempMin, tempMax, pressure, humidity, speed) =>
 });
 
 
+
 let initialState = {
         temp: null,
         tempMin: null,
@@ -37,8 +38,9 @@ const Reducer = (state = initialState, action) => {
         default:
             return state;
     }
-}
 
+
+}
 
 export default Reducer;
 

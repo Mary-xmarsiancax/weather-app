@@ -8,7 +8,6 @@ class ContentContainer extends React.Component {
 
     }
     render = () => {
-     
         return (
             <div>
                 <Content temp={this.props.temp}

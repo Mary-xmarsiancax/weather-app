@@ -15,8 +15,12 @@ class NavBarContainer extends React.Component {
         console.log(citiesName)
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${citiesName}&appid=9d64cb7219261444377ecf9c36ed62d9`)
             .then(response => {
-                let {temp, temp_min, temp_max, pressure, humidity} = response.data.main;
+                const data = {...response.data.main};
+
+                const keys = Object.keys(data).filter(el => el.indexOf("temp") >= 0);
+                keys.forEach(el => data[el] = Math.round(data[el] - 273.15));
                 let {speed} = response.data.wind;
+                let {temp, temp_min, temp_max, pressure, humidity} = data;
                 this.props.setWeather(temp, temp_min, temp_max, pressure, humidity, speed);
             })
     }

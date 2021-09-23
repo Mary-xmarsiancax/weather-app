@@ -1,0 +1,12 @@
+.contentWr{
+display: grid;
+
+}
+
+.header{
+    font-family: SansSerif, fantasy;
+    font-size: large ;
+    display: flex;
+    justify-content: center;
+
+}
