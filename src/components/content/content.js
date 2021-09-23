@@ -3,12 +3,12 @@ let Content = (props) => {
     return <div>
         <div className={s.header}>У ПРИРОДЫ НЕТ ПЛОХОЙ ПОГОДЫ</div>
         <div className={s.contentWr}>
-            <div>Средняя температура воздуха: <span>{props.temp}</span> градусов по Цельсию</div>
-            <div>Минимальная дневная температура воздуха: {props.tempMin} градусов по Цельсию</div>
-            <div>Максимальная дневная температура воздуха: {props.tempMax} градусов по Цельсию</div>
-            <div>Атмосферное давление составляет {props.pressure} мм рт. ст.</div>
-            <div>Влажность {props.humidity} </div>
-            <div>Скорость ветра составляет {props.speed} м/с</div>
+            <div className={s.content}>Средняя температура воздуха: <span>{props.temp}</span> градусов по Цельсию</div>
+            <div className={s.content}>Минимальная дневная температура воздуха: <span>{props.tempMin}</span> градусов по Цельсию</div>
+            <div className={s.content}>Максимальная дневная температура воздуха:<span>{props.tempMax}</span>  градусов по Цельсию</div>
+            <div className={s.content}>Атмосферное давление составляет <span>{props.pressure}</span> мм рт. ст.</div>
+            <div className={s.content}>Влажность <span>{props.humidity}</span> %</div>
+            <div className={s.content}>Скорость ветра составляет <span>{props.speed}</span> м/с</div>
         </div>
 
     </div>

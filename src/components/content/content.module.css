@@ -1,6 +1,6 @@
 .contentWr{
-display: grid;
-
+padding: 1em;
+    margin: 1em;
 }
 
 .header{
@@ -9,4 +9,8 @@ display: grid;
     display: flex;
     justify-content: center;
 
+}
+.content span{
+    font-size: large;
+    font-weight: bold;
 }

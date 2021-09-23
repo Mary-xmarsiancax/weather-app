@@ -18,7 +18,7 @@
     width: 60px;
 }
 
-.select {
+.input {
     grid-column:3/4 ;
     grid-row:3/4 ;
 }
