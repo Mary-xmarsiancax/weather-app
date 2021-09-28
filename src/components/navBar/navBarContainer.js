@@ -12,7 +12,6 @@ class NavBarContainer extends React.Component {
 
     let
     getWeatherForThisCity = (citiesName) => {
-        console.log(citiesName)
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${citiesName}&appid=9d64cb7219261444377ecf9c36ed62d9`)
             .then(response => {
                 const data = {...response.data.main};
