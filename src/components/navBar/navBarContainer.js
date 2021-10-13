@@ -26,11 +26,8 @@ class NavBarContainer extends React.Component {
 
     render = () => {
         return (
-
-            <div>
                 <NavBar currentCitiesName={this.props.currentCitiesName}
                         getWeatherForThisCity={this.getWeatherForThisCity}/>
-            </div>
 
         )
 
