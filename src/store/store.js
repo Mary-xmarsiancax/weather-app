@@ -1,11 +1,11 @@
-import {applyMiddleware, combineReducers, createStore} from "redux";
+import {combineReducers, createStore} from "redux";
 import React from 'react';
-import Reducer from "./reducer";
 import {composeWithDevTools} from "redux-devtools-extension";
+import contentReducer from "./contentReducer";
 
 
 let reducers = combineReducers({
-    headerState: Reducer,
+    contentStore: contentReducer,
 });
 
 

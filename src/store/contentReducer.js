@@ -1,5 +1,4 @@
 import React from 'react';
-
 const CHANGE_CURRENT_CITIES_NAME = "CHANGE_CURRENT_CITIES_NAME"
 const SET_WEATHER = "SET_WEATHER"
 export const onChangeCurrentCitiesName = (el) => ({type: CHANGE_CURRENT_CITIES_NAME, newCurrentCitiesName: el});
@@ -20,7 +19,7 @@ let initialState = {
         currentCitiesName: "Готэм-Сити"
     }
 ;
-const Reducer = (state = initialState, action) => {
+const contentReducer = (state = initialState, action) => {
     switch (action.type) {
         case CHANGE_CURRENT_CITIES_NAME:
             return {
@@ -42,7 +41,7 @@ const Reducer = (state = initialState, action) => {
 
 }
 
-export default Reducer;
+export default contentReducer;
 
 
 

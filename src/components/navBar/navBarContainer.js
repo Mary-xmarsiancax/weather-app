@@ -1,13 +1,14 @@
 import {connect} from "react-redux";
 import React from 'react';
 import NavBar from "./navBar";
-import {setWeather} from "../../store/reducer";
+import {setWeather} from "../../store/contentReducer";
 import axios from "axios";
 
 
 class NavBarContainer extends React.Component {
 
     getWeatherForThisCityNow = (citiesName) => {
+
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${citiesName}&appid=9d64cb7219261444377ecf9c36ed62d9&units=metric`)
             .then(response => {
                 const data = {...response.data.main};
@@ -42,7 +43,7 @@ class NavBarContainer extends React.Component {
 }
 
 let mapStateToProps = (state) => ({
-    currentCitiesName: state.headerState.currentCitiesName
+    currentCitiesName: state.contentStore.currentCitiesName
 })
 
 export default connect(mapStateToProps, {setWeather})(NavBarContainer);

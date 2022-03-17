@@ -5,19 +5,6 @@ import React from 'react';
 import DataListInput from "react-datalist-input";
 
 class Header extends React.Component {
-    // state = {
-    //     currentCitiesName: null
-    // }
-    // onChangeCurrentCitiesNameLocal = (e) => {
-    //     const city = e.currentTarget.value
-    //     this.setState({
-    //         currentCitiesName: city
-    //     })
-    //
-    //     if (getCities().map(city => city.toLowerCase()).includes(city.toLowerCase())) {
-    //         this.setNewCitiesNameToGlobalState(city)
-    //     }
-    // }
 
     setNewCitiesNameToGlobalState = (value) => {
         this.props.onChangeCurrentCitiesName(value);
