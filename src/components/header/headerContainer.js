@@ -1,7 +1,7 @@
 import {connect} from "react-redux";
 import Header from "./header";
 import React from 'react';
-import {onChangeCurrentCitiesName} from "../../store/contentReducer";
+import {getCurrentWeather, onChangeCurrentCitiesName} from "../../store/contentReducer";
 
 class HeaderContainer extends React.Component {
     componentDidMount() {
@@ -18,4 +18,4 @@ let mapStateToProps = (state) => ({
     currentCitiesName: state.contentStore.currentCitiesName,
 })
 
-export default connect(mapStateToProps, {onChangeCurrentCitiesName})(HeaderContainer);
+export default connect(mapStateToProps, {onChangeCurrentCitiesName,getCurrentWeather})(HeaderContainer);

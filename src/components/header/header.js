@@ -8,6 +8,7 @@ class Header extends React.Component {
 
     setNewCitiesNameToGlobalState = (value) => {
         this.props.onChangeCurrentCitiesName(value);
+        this.props.getCurrentWeather(value)
     }
 
     render() {

@@ -12,8 +12,6 @@ class NavBarContainer extends React.Component {
         axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${citiesName}&appid=9d64cb7219261444377ecf9c36ed62d9&units=metric`)
             .then(response => {
                 const data = {...response.data.main};
-                // const keys = Object.keys(data).filter(el => el.indexOf("temp") >= 0);
-                // keys.forEach(el => data[el] = Math.round(data[el] - 273.15));
                 let {speed} = response.data.wind;
                 let {temp, temp_min, temp_max, pressure, humidity} = data;
                 this.props.setWeather(temp, temp_min, temp_max, pressure, humidity, speed);
@@ -33,8 +31,9 @@ class NavBarContainer extends React.Component {
     render = () => {
         return (
                 <NavBar currentCitiesName={this.props.currentCitiesName}
-                        getWeatherForThisCityNow={this.getWeatherForThisCityNow}
-                        getWeatherForThisCityOnFourDays = {this.getWeatherForThisCityOnFourDays}/>
+                        // getWeatherForThisCityNow={this.getWeatherForThisCityNow}
+                        // getWeatherForThisCityOnFourDays = {this.getWeatherForThisCityOnFourDays}
+                />
 
         )
 
@@ -46,4 +45,4 @@ let mapStateToProps = (state) => ({
     currentCitiesName: state.contentStore.currentCitiesName
 })
 
-export default connect(mapStateToProps, {setWeather})(NavBarContainer);
+export default connect(mapStateToProps, {})(NavBarContainer);
