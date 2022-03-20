@@ -1,0 +1,19 @@
+.portal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.portal .portalBlock {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    margin: 200px 700px;
+    border: solid 2px black;
+    border-radius: 3px;
+    background-color: darkgray;
+    text-align: center;
+}

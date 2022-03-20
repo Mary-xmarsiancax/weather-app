@@ -1,16 +1,28 @@
-.contentWr{
-padding: 1em;
+.contentWr {
+    padding: 1em;
     margin: 1em;
 }
 
-.header{
+.sevenDaysWeather {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+}
+.sevenDaysWeather h5{
+    text-align: center;
+}
+
+.header {
     font-family: SansSerif, fantasy;
-    font-size: large ;
+    font-size: large;
     display: flex;
     justify-content: center;
 
 }
-.content span{
+
+.content span {
     font-size: large;
     font-weight: bold;
+}
+.dayOfWeeksItem{
+    text-align: center;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import Content from "./content";
 import {connect} from "react-redux";
+import {setCitiesNameNotFound} from "../../store/contentReducer";
 
 
 class ContentContainer extends React.Component {
@@ -15,7 +16,8 @@ class ContentContainer extends React.Component {
                          tempMax={this.props.tempMax}
                          pressure={this.props.pressure}
                          humidity={this.props.humidity}
-                         speed={this.props.speed}/>
+                         speed={this.props.speed}
+                         setCitiesNameNotFound={this.props.setCitiesNameNotFound}/>
         </div>
     }
 
@@ -30,4 +32,4 @@ let mapStateToProps = (state) => ({
     speed: state.contentStore.speed,
     currentCitiesName: state.contentStore.currentCitiesName
 })
-export default connect(mapStateToProps, {})(ContentContainer);
+export default connect(mapStateToProps, {setCitiesNameNotFound})(ContentContainer);
